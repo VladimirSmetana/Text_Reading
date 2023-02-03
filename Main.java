@@ -57,7 +57,7 @@ class txtDriver
         return cols;
     }
 
-    ArrayList<Float> get_string_by_id(int id)
+    ArrayList<Float> get_row_by_id(int id)
     {
         ArrayList<Float> out = new ArrayList<Float>();
 
@@ -67,7 +67,16 @@ class txtDriver
 
         return out;
     }
+    ArrayList<Float> get_col_by_id(int id)
+    {
+        ArrayList<Float> out = new ArrayList<Float>();
+        for(int i = 0; i<rows; i++){
+            out.add(table[i][id-1]);
+        }
 
+        return out;
+
+    }
 }
 public class Main
 {
@@ -75,7 +84,7 @@ public class Main
     {
         txtDriver mytxt = new txtDriver("BD.txt");
 
-        ArrayList<Float> mass = mytxt.get_string_by_id(1);
+        ArrayList<Float> mass = mytxt.get_row_by_id(1);
 
 
 

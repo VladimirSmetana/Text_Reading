@@ -42,8 +42,6 @@ class txtDriver
             }
 
         }
-
-
     }
     public
     float get_value(int row, int col)
